@@ -1,0 +1,25 @@
+{
+  "name": "prototyping-in-code",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jleonard/prototyping-in-code",
+  "authors": [
+    "John Leonard <thejohnleonard@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "click-through": "*",
+    "jquery-annotate": "~0.1.0",
+    "jquery": "~2.1.4",
+    "timed-release": "~3.0.1",
+    "monarch": "~0.0.6"
+  }
+}

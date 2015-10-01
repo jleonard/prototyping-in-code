@@ -1,0 +1,171 @@
+@import '../../bower_components/monarch/src/less/monarch.less';
+
+@display : 'PT Sans Narrow', sans-serif; // 400 700
+@sans : 'PT Sans', sans-serif; // 400 700 bold 700 italic
+
+
+// mixins
+//-------------------------------
+#fullscreen(@url){
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(@url);
+}
+
+body{
+  font-family: @sans;
+  line-height: 1.25;
+  background-color: @newsprint;
+  color: @slate;
+}
+
+h1{
+  font-family: @display;
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+h2,.h2{
+  font-size: 5rem;
+  margin: 0;
+}
+
+h3,.h3,p{
+  font-size: 3rem;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: @aqua;
+}
+
+section{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  > div{
+    padding: @baseUnit * 3 0;
+    flex: 1;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    > article{
+      flex: 1;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+  &.major{
+    min-height: 150vh;
+  }
+}
+
+section.image{
+  img{
+    border: 10px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+  }
+  &.fullscreen{
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+section.meta{
+  background-color: @blue;
+  color: white;
+  h1{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+section.emphasis,.intro{
+  background-color: black;
+  color: @newsprint;
+  h1{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+section.sub-emphasis{
+  background-color: @slate;
+  color: @newsprint;
+  div > *{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    .h2();
+  }
+}
+
+section.dont{
+  background-color: @red;
+  color: white;
+}
+
+section.do{
+  background-color: @green;
+  color: white;
+}
+
+section.minor{
+  h1{
+    .h2();
+  }
+  h2{
+    .h3();
+  }
+}
+
+section.heart{
+  background-color: @maroon;
+  color: @pee;
+}
+
+// slides
+//-------------------------------
+.book{
+  width: 33%;
+  display: block;
+  float: right;
+}
+.author{
+  float: left;
+  span{
+    display: block;
+  }
+}
+.contain{
+  background-size: contain;
+}
+.overcomplicate{
+  #fullscreen('../img/stick-figures.gif');
+  background-size: contain;
+  background-position-x: 100%;
+}
+
+.hal{
+  #fullscreen('../img/hal.gif');
+}
+
+.skankphone{
+  #fullscreen('../img/skankphone.jpg');
+}
