@@ -25,16 +25,20 @@
 
 <%- partial('_partials/title-slide',{variation:'sub-emphasis',title:"Why do we prototype in code?"}) %>
 
-<section>
+<section class='minor'>
   <div>
-    <h1>When a personalized user journey is critical to evaluating the experience.</h1>
-    <p class='major'>Example: <a href='https://www.virginamerica.com/'>booking a flight</a>
+    <article>
+      <h1>When a personalized user journey is critical to evaluating the experience.</h1>
+      <h2 class='major'>Example: <a href='https://www.virginamerica.com/'>booking a flight</a></h2>
+    </article>
   </div>
 </section>
 
-<section>
+<section class='minor'>
   <div>
-    <h1>When the system plays an active role in the experience.</h1>
+    <article>
+      <h1>When the system plays an active role in the experience.</h1>
+    </article>
   </div>
 </section>
 
@@ -45,24 +49,24 @@
 <%- partial('_partials/motion-study') %>
 
 <!-- technical poc -->
-<%- partial('_partials/title-subtitle-slide',{variation:' ',title:"The Technical POC",subtitle:"Technology-driven protoypes."}) %>
+<%- partial('_partials/title-subtitle-slide',{variation:'minor',title:"The Technical POC",subtitle:"Technology-driven protoypes."}) %>
 
 <%- partial('_partials/title-slide',{variation:'skankphone major',title:" "}) %>
 
 
 <!-- tools -->
-<%- partial('_partials/title-subtitle-slide',{variation:'emphasis',title:"Tools",subtitle:'Selecting the right apps, code languages etc.'}) %>
+<%- partial('_partials/title-subtitle-slide',{variation:'sub-emphasis',title:"Tools",subtitle:'Selecting the right apps, code languages etc.'}) %>
 
-<%- partial('_partials/title-subtitle-slide',{variation:'',title:"The 10 minute test",subtitle:"If you can't figure out how it works in 10 minutes run away."}) %>
+<%- partial('_partials/title-subtitle-slide',{variation:'minor',title:"The 10 minute test",subtitle:"If you can't figure out how it works in 10 minutes put it down and run away."}) %>
 
 <section>
   <div>
-    <h2>10 minute test questions</h2>
+    <h2>The 10 minute test</h2>
     <ul>
       <li>Is there good documentation?</li>
       <li>Is there training?</li>
       <li>Are there examples or starter templates I can work with?</li>
-      <li>Can I pick this up and make progress in 10 min?</li>
+      <li>Can I pick this up and make it do something I want it to do in 10 min?</li>
     </ul>
   </div>
 </section>
@@ -77,15 +81,39 @@
 
 <%- partial('_partials/title-slide',{variation:'sub-emphasis',title:"My recommendation for the beginner"}) %>
 
-<%- partial('_partials/title-slide',{variation:'',title:"Using Apps - <a href='http://bohemiancoding.com/sketch/'>Sketch</a> &amp; <a href='http://framerjs.com/'>Framer</a>"}) %>
+<section>
+  <div>
+    <div class='app'>
+      <a href='http://bohemiancoding.com/sketch/' target='_blank'>
+        <h2>Sketch</h2>
+        <img class='' src='img/sketch.png'/>
+      </a>
+    </div>
+    <div class='app'>
+      <a href='http://framerjs.com/' target='_blank'>
+        <h2>Framer</h2>
+        <img class='' src='img/framer.png'/>
+      </a>
+    </div>
+  </div>
+</section>
 
 <%- partial('_partials/title-slide',{variation:'sub-emphasis',title:"My recommendation for the intermediate/expert"}) %>
 
-<%- partial('_partials/title-slide',{variation:'',title:"Hand coding with <a href='http://getbootstrap.com/'>Bootstrap</a>"}) %>
+<section>
+  <div>
+    <div class='app'>
+      <a href='http://getbootstrap.com' target='_blank'>
+        <h2>Hand Coding w/ Bootstrap</h2>
+        <img class='' src='img/bootstrap.png'/>
+      </a>
+    </div>
+  </div>
+</section>
 
 <section>
   <div>
-    <p class='major'>UI Libraries give you a toolkit of components and layout grids to build with. They require basic html, css and javascript to work with what comes out of the box.
+    <p class='major'>UI Libraries like Bootstrap give you a toolkit of <a href='http://getbootstrap.com/components/' target='_blank'>components</a> and <a href='http://getbootstrap.com/css/#grid'>layout grids</a> to build with. They require basic html, css and javascript to work with what comes out of the box.
       <br/>
       <br/>
       If you've got more .css or javascript experience you can go deeper into customizing the look and feel or the functionality.
@@ -95,23 +123,21 @@
 
 <%- partial('_partials/title-slide',{variation:'emphasis',title:"The Do's & Don'ts of Prototyping in Code"}) %>
 
-<%- partial('_partials/title-subtitle-slide',{variation:'dont',title:"Don't forget about paper prototyping!",subtitle:"Don't run directly to code. Pick the appropriate medium for your prototype. Code has a production cost."}) %>
+<%- partial('_partials/title-subtitle-slide',{variation:'dont minor',title:"Don't forget about paper prototyping!",subtitle:"Don't run directly to code.<br/>Pick the appropriate medium for your prototype.<br/>Code has a production cost."}) %>
 
-<section class='do'>
+<section class='do minor'>
   <div>
     <h1>Manage expectations</h1>
     <h2>Including your own</h2>
-    <p>When presenting to users, always lead the conversation by framing expectations on the available functionality and the level of fidelity in the prototype.</p>
-    <p>To manage your own expectations, be reasonable about the level of fidelity and functionality required for a successful prototype.</p>
+    <p>When presenting, always set expectations on the available functionality and the fidelity of the prototype.</p>
+    <p>Be reasonable with yourself regarding the level of fidelity and functionality required for a successful test.</p>
   </div>
 </section>
 
-<%- partial('_partials/title-subtitle-slide',{variation:'dont',title:"Don't overcomplicate it!",subtitle:"As simple as possible, but not simpler."}) %>
-
-<%- partial('_partials/title-subtitle-slide',{variation:'dont',title:"Don't let the design or technology get away from you.",subtitle:"Digital tools can accelerate production but they can also pull you into trivial details."}) %>
+<%- partial('_partials/title-subtitle-slide',{variation:'dont minor',title:"Don't let the design or technology get away from you.",subtitle:"Digital tools can accelerate production but they can also pull you into trivial details."}) %>
 
 
-<%- partial('_partials/image-slide',{variation:'dont',image:"img/hal.gif"}) %>
+<%- partial('_partials/image-slide',{variation:'dont minor',image:"img/hal.gif"}) %>
 
 <section class='do'>
   <div>
@@ -121,6 +147,7 @@
   </div>
 </section>
 
+<%- partial('_partials/links',{}) %>
 
-<%- partial('_partials/title-slide',{variation:'meta',title:"Thank you"}) %>
+<%- partial('_partials/title-subtitle-slide',{variation:'meta',title:"Thank you",subtitle:'http://jleonard.github.io/prototyping-in-code/'}) %>
 
