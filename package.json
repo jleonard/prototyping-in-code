@@ -7,6 +7,8 @@
     "install": "bower install",
     "build": "harp compile src dist",
     "postbuild": "cp -R bower_components dist/bower_components",
+    "gh": "cp -R dist/css . && cp -R dist/img . && cp -R dist/index.html",
+    "postgh": "git add --all && git commit -m 'gh-pages' && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
